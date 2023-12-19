@@ -129,7 +129,7 @@
         android:layout_marginEnd="20dp"
         android:autofillHints="@null"
         android:background="@null"
-        android:hint="@string/signup_email_hint"
+        android:hint="@string/signup_name_hint"
         android:inputType="textPersonName"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"

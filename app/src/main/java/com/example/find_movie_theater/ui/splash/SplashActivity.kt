@@ -5,7 +5,6 @@ import android.os.Looper
 import com.example.find_movie_theater.data.remote.auth.AuthService
 import com.example.find_movie_theater.databinding.ActivitySplashBinding
 import com.example.find_movie_theater.ui.BaseActivity
-import com.example.find_movie_theater.ui.login.LoginActivity
 import com.example.find_movie_theater.ui.main.MainActivity
 
 
@@ -30,6 +29,6 @@ class SplashActivity: BaseActivity<ActivitySplashBinding>(ActivitySplashBinding:
     }
 
     override fun onAutoLoginFailure(code: Int, message: String) {
-        startActivityWithClear(LoginActivity::class.java)
+        startActivityWithClear(MainActivity::class.java)
     }
 }

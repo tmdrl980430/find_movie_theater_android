@@ -1,5 +1,6 @@
 package com.example.find_movie_theater.ui.main
 
+import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -13,6 +14,9 @@ class MainActivity: BaseActivity<ActivityMainBinding>(ActivityMainBinding::infla
     private lateinit var navHostFragment: NavHostFragment
 
     override fun initAfterBinding() {
+
+        Log.d("TAG", "start MainActivity!")
+
         navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
         val navController: NavController = navHostFragment.findNavController()

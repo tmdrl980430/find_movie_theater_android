@@ -60,7 +60,7 @@ class SignUpActivity: BaseActivity<ActivitySignupBinding>(ActivitySignupBinding:
 
     override fun onSignUpSuccess() {
         binding.signUpLoadingPb.visibility = View.GONE
-
+        Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
         finish()
     }
 
