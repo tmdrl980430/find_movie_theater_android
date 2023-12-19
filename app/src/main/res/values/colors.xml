@@ -14,5 +14,5 @@
     <color name="form_error">#F44336</color>
 
     <!-- 로그인 -->
-    <color name="login_button">#FFC107</color>
+    <color name="login_button">#352461</color>
 </resources>
