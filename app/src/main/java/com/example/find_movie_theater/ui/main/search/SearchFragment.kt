@@ -7,7 +7,7 @@ import com.example.find_movie_theater.ui.BaseFragment
 import com.example.find_movie_theater.ui.main.search.adapter.SearchRVAdapter
 
 class SearchFragment(): BaseFragment<FragmentSearchBinding>(FragmentSearchBinding::inflate) {
-    var movieList = arrayListOf(Movie(1, "actor1", "dddd",123), Movie(2, "actor2", "ddd",123), Movie(3, "", "dddd",123))
+    var movieList = arrayListOf(Movie(1, "actor1", "dddd",123), Movie(2, "actor2", "ddd",null), Movie(3, "actor3", "dddd",null), Movie(3, "actor3", "dddd",null))
     override fun initAfterBinding() {
 
         val SearchAdapter = SearchRVAdapter(movieList)

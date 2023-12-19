@@ -1,6 +1,7 @@
 package com.example.find_movie_theater.ui.main.search.adapter
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -43,7 +44,10 @@ class SearchRVAdapter(private val movieList: ArrayList<Movie>) : RecyclerView.Ad
 
     // 뷰홀더에 데이터를 바인딩해줘야 할 때마다 호출되는 함수 => 엄청나게 많이 호출
     override fun onBindViewHolder(holder: SearchRVAdapter.ViewHolder, position: Int) {
-        //holder.bind(movieList[position])
+        Log.d("리사이클러뷰",movieList[position].toString())
+
+
+        holder.bind(movieList[position])
         //holder.itemView.setOnClickListener { mItemClickListener.onItemClick(movieList) }
 //        holder.binding.itemAlbumTitleTv.setOnClickListener { mItemClickListener.onRemoveAlbum(position) } //삭제됐을 때
     }
@@ -57,7 +61,6 @@ class SearchRVAdapter(private val movieList: ArrayList<Movie>) : RecyclerView.Ad
         fun bind(movie: Movie){
             binding.itemMovieTitleTv.text = movie.title
             binding.itemMovieActorTv.text = movie.actor
-            binding.itemMovieCoverImgIv.setImageResource(movie.coverImg!!)
         }
     }
 }
