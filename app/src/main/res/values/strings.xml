@@ -7,7 +7,7 @@
 
     <!--메뉴-->
     <string name="menu_home">홈</string>
-    <string name="menu_search">찾기</string>
+    <string name="menu_search">상영 영화</string>
     <string name="menu_matching">매칭</string>
     <string name="menu_mypage">마이페이지</string>
 

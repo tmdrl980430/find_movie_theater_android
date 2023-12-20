@@ -12,7 +12,8 @@ class SplashActivity: BaseActivity<ActivitySplashBinding>(ActivitySplashBinding:
 
     override fun initAfterBinding() {
         Handler(Looper.getMainLooper()).postDelayed({
-            autoLogin()
+//            autoLogin()
+            startActivityWithClear(MainActivity::class.java)
         }, 2000)
     }
 
