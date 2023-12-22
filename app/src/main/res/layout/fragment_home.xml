@@ -5,11 +5,86 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <RadioGroup
+        android:id="@+id/radiogroup_profile_color"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rd_btn_color1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="@string/hobby_movie_chip"
+            android:button="@drawable/custom_radio_button"
+            android:checked="true"
+            android:tag="1" />
+
+        <RadioButton
+            android:id="@+id/rd_btn_color2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="@string/hobby_movie_chip"
+            android:button="@drawable/custom_radio_button"
+            android:tag="2" />
+
+        <RadioButton
+            android:id="@+id/rd_btn_color3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="@string/hobby_movie_chip"
+            android:button="@drawable/custom_radio_button"
+            android:tag="3" />
+
+        <RadioButton
+            android:id="@+id/rd_btn_color4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="@string/hobby_movie_chip"
+            android:button="@drawable/custom_radio_button"
+            android:tag="4" />
+
+        <RadioButton
+            android:id="@+id/rd_btn_color5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="@string/hobby_movie_chip"
+            android:button="@drawable/custom_radio_button"
+            android:tag="5" />
+
+    </RadioGroup>
     <!-- 네이버 지도를 추가할 FrameLayout -->
     <FrameLayout
         android:id="@+id/map_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup_profile_color" />
 
 
 
