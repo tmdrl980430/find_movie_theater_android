@@ -3,6 +3,7 @@ package com.example.find_movie_theater.ui.main.home
 import android.Manifest
 import android.content.pm.PackageManager
 import android.location.Geocoder
+import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.find_movie_theater.R
@@ -56,7 +57,19 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             ContextCompat.checkSelfPermission(requireContext(), it) == PackageManager.PERMISSION_GRANTED
         }
     }
+    private fun getAddressInBackground(latitude: Double, longitude: Double) {
+        Thread {
+            val geocoder = Geocoder(requireContext(), Locale.KOREAN)
+            val addresses = geocoder.getFromLocation(latitude, longitude, 1)
 
+            if (addresses != null && addresses.isNotEmpty()) {
+                val address = addresses[0].getAddressLine(0)
+                //toast(address)
+                Log.d("address", address)
+
+            }
+        }.start()
+    }
     override fun onMapReady(naverMap: NaverMap) {
         this.naverMap = naverMap
         naverMap.locationSource = locationSource
@@ -92,6 +105,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             val clickedMarker = overlay as Marker
             val markerIndex = markers.indexOf(clickedMarker)
             Toast.makeText(requireActivity(), "마커 $markerIndex 클릭", Toast.LENGTH_SHORT).show()
+            Log.d("clickedMarker.position.latitude : ","${clickedMarker.position.latitude}")
+            Log.d("clickedMarker.position.longitude : ","${clickedMarker.position.longitude}")
+            getAddressInBackground(clickedMarker.position.latitude,clickedMarker.position.longitude)
             true
         }
     }
