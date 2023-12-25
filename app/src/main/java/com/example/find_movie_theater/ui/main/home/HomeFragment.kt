@@ -65,11 +65,18 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             if (addresses != null && addresses.isNotEmpty()) {
                 val address = addresses[0].getAddressLine(0)
                 //toast(address)
-                Log.d("address", address)
+                toast(address)
 
             }
         }.start()
     }
+
+    private fun toast(text: String) {
+        requireActivity().runOnUiThread {
+            Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()
+        }
+    }
+
     override fun onMapReady(naverMap: NaverMap) {
         this.naverMap = naverMap
         naverMap.locationSource = locationSource
@@ -104,7 +111,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             // overlay는 Marker 인스턴스
             val clickedMarker = overlay as Marker
             val markerIndex = markers.indexOf(clickedMarker)
-            Toast.makeText(requireActivity(), "마커 $markerIndex 클릭", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(requireActivity(), "마커 $markerIndex 클릭", Toast.LENGTH_SHORT).show()
             Log.d("clickedMarker.position.latitude : ","${clickedMarker.position.latitude}")
             Log.d("clickedMarker.position.longitude : ","${clickedMarker.position.longitude}")
             getAddressInBackground(clickedMarker.position.latitude,clickedMarker.position.longitude)
