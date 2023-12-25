@@ -84,27 +84,76 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         naverMap.locationTrackingMode = LocationTrackingMode.Follow
 
         val locationList: ArrayList<LocationData> = arrayListOf(
-            LocationData(126.897348, 37.5682507),
-            LocationData(126.941194, 37.5597128),
-            LocationData(126.922071, 37.5560525)
+            LocationData(37.5597128, 126.941194, "메가박스 신촌"),
+            LocationData(37.5682507, 126.897348, "메가박스 상암"),
+            LocationData(37.5560525, 126.922071, "메가박스 홍대"),
+            LocationData(37.5293522, 126.876065, "메가박스 목동"),
+            LocationData(37.5405495, 126.837564, "메가박스 화곡"),
+            LocationData(37.5592959, 126.835214, "메가박스 마곡"),
+            LocationData(37.5670170, 127.007302, "메가박스 동대문"),
+            LocationData(37.5268373, 126.875017, "메가박스 더 부티크 목동현대백화점"),
+            LocationData(37.5043439, 127.003599, "메가박스 센트럴"),
+            LocationData(37.4846013, 126.981641, "메가박스 이수"),
+            LocationData(37.4979261, 127.026522, "메가박스 강남"),
+            LocationData(37.5003587, 127.026896, "메가박스 강남대로(씨티)"),
+            LocationData(37.5125020, 127.058796, "메가박스 코엑스"),
+            LocationData(37.5419436, 127.044641, "메가박스 성수"),
+            LocationData(37.5932132, 127.074665, "메가박스 상봉"),
+            LocationData(37.6545328, 127.038881, "메가박스 창동"),
+            LocationData(37.5530296, 127.073686, "메가박스 군자"),
+            LocationData(37.4458471, 126.894139, "메가박스 광명소하"),
+            LocationData(37.6476807, 126.896455, "메가박스 고양스타필드"),
+            LocationData(37.6424162, 126.792699, "메가박스 백석벨라시타"),
+            LocationData(37.4614606, 126.813898, "메가박스 부천스타필드시티"),
+            LocationData(37.5285159, 127.125126, "메가박스 강동"),
+            LocationData(37.6679058, 126.751484, "메가박스 킨텍스"),
+            LocationData(37.4187247, 126.882610, "메가박스 광명AK플라자"),
+            LocationData(37.4805933, 127.123645, "메가박스 송파파크하비오"),
+            LocationData(37.7057529, 126.758841, "메가박스 파주운정"),
+            LocationData(37.6558596, 127.126731, "메가박스 별내"),
+            LocationData(37.5881005, 126.675337, "메가박스 검단"),
+            LocationData(37.5664166, 127.189628, "메가박스 미사강변"),
+            LocationData(37.3722964, 126.944821, "메가박스 금정AK플라자"),
+            LocationData(37.6162298, 127.153735, "메가박스 남양주현대아울렛 스페이스원"),
+            LocationData(37.6898192, 126.756637, "메가박스 일산"),
+            LocationData(37.3973832, 126.727404, "메가박스 인천논현"),
+            LocationData(37.7458323, 127.095726, "메가박스 의정부민락"),
+            LocationData(37.3855201, 127.122305, "메가박스 분당"),
+            LocationData(37.7648602, 126.774503, "메가박스 파주금촌"),
+            LocationData(37.5336700, 126.655696, "메가박스 청라지젤"),
+            LocationData(37.7138021, 126.687762, "메가박스 파주출판도시"),
+            LocationData(37.3179251, 126.835623, "메가박스 안산중앙"),
+            LocationData(37.6449089, 126.624486, "메가박스 김포한강신도시"),
+            LocationData(37.3786370, 126.662822, "메가박스 송도"),
+            LocationData(37.3699173, 126.730055, "메가박스 시흥배곧"),
+            LocationData(37.6550639, 127.244054, "메가박스 남양주")
         )
 
+        Log.d("markers 전","markers : ${markers}")
+
         locationList.forEach { locationData ->
-            addMarker(locationData.latitude ?: 0.0, locationData.longitude ?: 0.0)
+            addMarker(locationData.latitude, locationData.longitude, locationData.captionText)
         }
 
+        Log.d("markers 후","markers : ${markers}")
+
+
         naverMap.setOnMapClickListener { point, coord ->
-            addMarker(coord.latitude, coord.longitude)
+            addMarker(coord.latitude, coord.longitude, "")
         }
     }
 
-    private fun addMarker(latitude: Double, longitude: Double) {
+    private fun addMarker(latitude: Double, longitude: Double, locationName : String) {
         val newMarker = Marker()
         newMarker.position = LatLng(latitude, longitude)
         newMarker.map = naverMap
+        newMarker.captionText = locationName
+        Log.d("newMarker.position ","newMarker.position  : ${newMarker.position }")
+        Log.d("newMarker.map ","newMarker.map  : ${newMarker.map }")
 
         // 새로운 마커를 리스트에 추가
         markers.add(newMarker)
+
 
         // 마커 클릭 이벤트 처리
         newMarker.setOnClickListener { overlay ->
