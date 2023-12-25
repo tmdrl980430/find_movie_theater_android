@@ -29,7 +29,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     private lateinit var naverMap: NaverMap
     private lateinit var locationSource: FusedLocationSource
-    private val marker = Marker()
+    private val markers = mutableListOf<Marker>()
 
     override fun initAfterBinding() {
         if (!hasPermission()) {
@@ -37,6 +37,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         } else {
             initMapView()
         }
+
     }
 
     private fun initMapView() {
@@ -68,19 +69,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             LocationData(126.922071, 37.5560525)
         )
 
-//        val markers = Array<Marker?>(locationList.size) { null }
-//
-//        locationList.forEachIndexed { index, locationData ->
-//            markers[index] = Marker().apply {
-//                addMarker(locationData.latitude ?: 0.0, locationData.longitude ?: 0.0)
-//                setOnClickListener {
-//                    Toast.makeText(requireActivity(), "마커 $index 클릭", Toast.LENGTH_SHORT).show()
-//                    false
-//                }
-//            }
-//        }
-
-
+        locationList.forEach { locationData ->
+            addMarker(locationData.latitude ?: 0.0, locationData.longitude ?: 0.0)
+        }
 
         naverMap.setOnMapClickListener { point, coord ->
             addMarker(coord.latitude, coord.longitude)
@@ -88,27 +79,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     }
 
     private fun addMarker(latitude: Double, longitude: Double) {
-        marker.position = LatLng(latitude, longitude)
-        marker.map = naverMap
-        getAddressInBackground(latitude, longitude)
-    }
+        val newMarker = Marker()
+        newMarker.position = LatLng(latitude, longitude)
+        newMarker.map = naverMap
 
+        // 새로운 마커를 리스트에 추가
+        markers.add(newMarker)
 
-    private fun getAddressInBackground(latitude: Double, longitude: Double) {
-        Thread {
-            val geocoder = Geocoder(requireContext(), Locale.KOREAN)
-            val addresses = geocoder.getFromLocation(latitude, longitude, 1)
-
-            if (addresses != null && addresses.isNotEmpty()) {
-                val address = addresses[0].getAddressLine(0)
-                toast(address)
-            }
-        }.start()
-    }
-
-    private fun toast(text: String) {
-        requireActivity().runOnUiThread {
-            Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()
+        // 마커 클릭 이벤트 처리
+        newMarker.setOnClickListener { overlay ->
+            // overlay는 Marker 인스턴스
+            val clickedMarker = overlay as Marker
+            val markerIndex = markers.indexOf(clickedMarker)
+            Toast.makeText(requireActivity(), "마커 $markerIndex 클릭", Toast.LENGTH_SHORT).show()
+            true
         }
     }
 }
