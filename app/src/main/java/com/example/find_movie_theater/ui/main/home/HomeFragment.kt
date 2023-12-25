@@ -1,6 +1,7 @@
 package com.example.find_movie_theater.ui.main.home
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.util.Log
@@ -10,6 +11,7 @@ import com.example.find_movie_theater.R
 import com.example.find_movie_theater.data.entities.LocationData
 import com.example.find_movie_theater.databinding.FragmentHomeBinding
 import com.example.find_movie_theater.ui.BaseFragment
+import com.example.find_movie_theater.ui.main.home.result.ResultActivity
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.LocationTrackingMode
 import com.naver.maps.map.MapFragment
@@ -129,13 +131,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             LocationData(37.6550639, 127.244054, "메가박스 남양주")
         )
 
-        Log.d("markers 전","markers : ${markers}")
-
         locationList.forEach { locationData ->
             addMarker(locationData.latitude, locationData.longitude, locationData.captionText)
         }
-
-        Log.d("markers 후","markers : ${markers}")
 
 
         naverMap.setOnMapClickListener { point, coord ->
@@ -161,10 +159,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             val clickedMarker = overlay as Marker
             val markerIndex = markers.indexOf(clickedMarker)
             //Toast.makeText(requireActivity(), "마커 $markerIndex 클릭", Toast.LENGTH_SHORT).show()
-            Log.d("clickedMarker.position.latitude : ","${clickedMarker.position.latitude}")
-            Log.d("clickedMarker.position.longitude : ","${clickedMarker.position.longitude}")
+
             getAddressInBackground(clickedMarker.position.latitude,clickedMarker.position.longitude)
+            //startNextActivity(this, ResultActivity::class.java)
+
+            startResultActivity(clickedMarker.position.latitude, clickedMarker.position.longitude, locationName)
             true
         }
+    }
+
+    private fun startResultActivity(latitude: Double, longitude: Double, selectLocationName : String) {
+        val intent = Intent(requireContext(), ResultActivity::class.java)
+        intent.putExtra("latitude", latitude)
+        intent.putExtra("longitude", longitude)
+        intent.putExtra("selectLocationName", selectLocationName)
+        startActivity(intent)
     }
 }

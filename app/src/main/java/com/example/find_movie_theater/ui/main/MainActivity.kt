@@ -63,11 +63,11 @@ class MainActivity: BaseActivity<ActivityMainBinding>(ActivityMainBinding::infla
 
         Log.d("encodeUTF8","$searchTerm: $encodedSearchTerm")
 
-        val naverMovieService = MovieService(this)
-        naverMovieService.searchNaverMovie(encodedSearchTerm)
+        //val naverMovieService = MovieService(this)
+        //naverMovieService.searchNaverMovie(encodedSearchTerm)
 
-        val movieService = MovieService(this)
-        movieService.searchMovie(formattedYesterdayDate)
+        //val movieService = MovieService(this)
+        //movieService.searchMovie(formattedYesterdayDate)
 
 
 
