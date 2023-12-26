@@ -106,9 +106,30 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                     LocationData(37.5816649, 126.885940, "커브스 상암클럽"),
                     LocationData(37.5813690, 126.887424, "에이블짐 상암점"),
                     LocationData(37.5813690, 126.887424, "플라잉요가핏"),
-                    LocationData(37.5813690, 126.887424, "H 필라테스"),
+                    LocationData(37.5800370, 126.888977, "H 필라테스"),
+                    LocationData(37.5813690, 126.887424, "모던필라테스 상암점"),
+                    LocationData(37.5794165,126.890257 ,"GDR 와이즈골프 상암점"),
+                    LocationData(37.5756232,126.890025, "온핏스마트짐 상암점"),
+                    LocationData(37.5761166, 126.897654, "세븐짐 상암DMC점"),
+                    LocationData(37.5808988,126.905912 , "더로얄골프클럽"),
+                    LocationData(37.6002064,126.894665 , "디오엠피트니스"),
+                    LocationData(37.5304843,126.881641 , "목동사격장"),
+                    LocationData(37.5151585, 126.940958, "노량진축구장"),
+                    LocationData(37.5601955, 126.985062, "엘씨아이볼링장"),
+                    LocationData(37.5711257, 126.999798, "클라이밍파크 종로점"),
+                    LocationData(37.5773597, 127.015013 ,"에이블짐 창신역점"),
+                    LocationData(37.4974121, 127.028693, "에이블짐 강남역점"),
+                    LocationData(37.5191281,127.050453 , "MN휘트니스 청담점"),
+                    LocationData(37.0938886, 126.956525, "경기도사격테마파크"),
+                    LocationData(37.5812832,128.327311, "휘닉스 평창 스노우 파크")
+                    //LocationData(, , ""),
                 )
             }
+            "travel" -> arrayListOf(
+                LocationData(37.5812832, 128.327311, "휘닉스 파크"),
+                LocationData(33.4302523, 126.928158, "휘닉스 아일랜드 제주"),
+
+            )
             else -> arrayListOf() // 다른 취미에 대한 처리 필요시 추가
         }
 
@@ -126,6 +147,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     fun setRadioClickListeners() {
         binding.rdBtnHobby1.setOnClickListener { changeHobby("movie") }
         binding.rdBtnHobby2.setOnClickListener { changeHobby("exercise") }
+        binding.rdBtnHobby3.setOnClickListener { changeHobby("travel") }
         // 다른 라디오 버튼에 대한 리스너도 필요에 따라 추가
     }
 

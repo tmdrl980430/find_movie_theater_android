@@ -45,6 +45,18 @@
             android:button="@drawable/custom_radio_button"
             android:tag="2" />
 
+        <RadioButton
+            android:id="@+id/rd_btn_hobby3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="@string/hobby_exercise_travel"
+            android:button="@drawable/custom_radio_button"
+            android:tag="3" />
+
     </RadioGroup>
     <!-- 네이버 지도를 추가할 FrameLayout -->
     <FrameLayout
