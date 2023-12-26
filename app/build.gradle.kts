@@ -111,6 +111,10 @@ dependencies {
     //google location
     implementation("com.google.android.gms:play-services-location:20.0.0")
 
+    //webview
+    implementation("androidx.webkit:webkit:1.9.0")
+
+
 
 }
 

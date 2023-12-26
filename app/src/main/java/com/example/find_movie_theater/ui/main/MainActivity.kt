@@ -6,7 +6,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.find_movie_theater.R
-import com.example.find_movie_theater.data.moviesearch.MovieService
 import com.example.find_movie_theater.databinding.ActivityMainBinding
 import com.example.find_movie_theater.ui.BaseActivity
 import java.io.UnsupportedEncodingException
@@ -58,10 +57,10 @@ class MainActivity: BaseActivity<ActivityMainBinding>(ActivityMainBinding::infla
         Log.d("Date","전날 날짜: $formattedYesterdayDate")
 
 
-        val searchTerm = "서울의봄" // 여기에 실제 검색어를 넣으세요
-        val encodedSearchTerm = encodeUTF8(searchTerm)
+        //val searchTerm = "서울의봄" // 여기에 실제 검색어를 넣으세요
+        //val encodedSearchTerm = encodeUTF8(searchTerm)
 
-        Log.d("encodeUTF8","$searchTerm: $encodedSearchTerm")
+        //Log.d("encodeUTF8","$searchTerm: $encodedSearchTerm")
 
         //val naverMovieService = MovieService(this)
         //naverMovieService.searchNaverMovie(encodedSearchTerm)

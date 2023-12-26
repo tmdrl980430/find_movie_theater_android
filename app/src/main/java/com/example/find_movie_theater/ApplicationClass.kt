@@ -16,8 +16,9 @@ class ApplicationClass : Application() {
 
         const val DEV_URL: String = "https://edu-api-test.softsquared.com";       // 테스트 서버 주소
         const val PROD_URL: String = "https://edu-api-test.softsquared.com"    // 실서버 주소
-        const val NAVER_SEARCH_URL : String = "https://openapi.naver.com/"
+        const val NAVER_SEARCH_URL : String = "https://openapi.naver.com/v1/search/"
         const val PLAYING_MOVIE_SEARCH_URL : String = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/"
+
         const val BASE_URL: String = DEV_URL
 
         const val CLIENT_ID : String = "M6M1Eeh14qwehoRSKCkn"
@@ -25,7 +26,7 @@ class ApplicationClass : Application() {
 
         lateinit var mSharedPreferences: SharedPreferences
         lateinit var retrofit: Retrofit
-        lateinit var retrofit_playing_naver_movie: Retrofit
+        lateinit var retrofit_naver: Retrofit
     }
 
     override fun onCreate() {
@@ -43,7 +44,7 @@ class ApplicationClass : Application() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        retrofit_playing_naver_movie = Retrofit.Builder()
+        retrofit_naver = Retrofit.Builder()
             .baseUrl(NAVER_SEARCH_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())

@@ -45,6 +45,10 @@
             android:name=".ui.main.home.result.ResultActivity"
             android:exported="true"/>
 
+        <activity
+            android:name=".ui.main.home.result.webViewActivity.WebViewActivity"
+            android:exported="true"/>
+
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"

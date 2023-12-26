@@ -10,7 +10,7 @@
     class MovieService (val view: MainView) {
 
         fun searchNaverMovie(movieName : String) {
-            val searchNaverMovieInterface = ApplicationClass.retrofit_playing_naver_movie.create(MovieRetrofitInterface::class.java)
+            val searchNaverMovieInterface = ApplicationClass.retrofit_naver.create(MovieRetrofitInterface::class.java)
 
             searchNaverMovieInterface.getSearchMovie(ApplicationClass.CLIENT_ID,ApplicationClass.CLIENT_SECRET, movieName)
                 .enqueue(object : Callback<MovieSearchResponse> {
