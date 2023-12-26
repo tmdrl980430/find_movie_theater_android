@@ -28,4 +28,22 @@
     <color name="group_yellow_litle">#ffde70</color>
     <color name="change_location">#80FFFFFF</color>
 
+
+    <color name="holo_blue_dark">#0000FF</color>
+    <color name="holo_red_dark">#FF0000</color>
+    <color name="holo_green_dark">#008000</color>
+
+    <color name="navyBlue">#001F3F</color> <!-- 남색 배경색 -->
+    <color name="gold">#FFD700</color> <!-- 금색 -->
+    <color name="darkGray">#333333</color> <!-- 짙은 그레이 -->
+    <color name="burgundy">#800020</color> <!-- 버건디 -->
+    <color name="cinnamon">#D2691E</color> <!-- 시나몬 -->
+    <color name="maroon">#800000</color> <!-- 마룬(진한 빨강) -->
+    <color name="olive">#808000</color> <!-- 올리브(연한 녹색) -->
+    <color name="coral">#FF7F50</color> <!-- 코랄(주홍색) -->
+    <color name="plum">#DDA0DD</color> <!-- 자두색 -->
+    <color name="slateBlue">#6A5ACD</color> <!-- 슬레이트 블루 -->
+
+
+
 </resources>
