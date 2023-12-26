@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroud_healing_story_no_string"
+    android:elevation="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RadioGroup
@@ -26,6 +28,7 @@
             android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:text="@string/hobby_movie_chip"
+            android:textColor="@color/white"
             android:button="@drawable/custom_radio_button"
             android:checked="true"
             android:tag="1" />
@@ -37,6 +40,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
+            android:textColor="@color/white"
             android:text="@string/hobby_exercise_chip"
             android:button="@drawable/custom_radio_button"
             android:tag="2" />

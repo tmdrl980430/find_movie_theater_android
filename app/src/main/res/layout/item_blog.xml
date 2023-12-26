@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="30dp">
 
     <TextView
         android:id="@+id/item_blog_title_tv"
@@ -12,7 +13,7 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:text="@string/select_blog_title_text"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +26,7 @@
         android:layout_marginTop="20dp"
         android:maxLines="1"
         android:text="@string/select_blog_description_text"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@id/item_blog_title_tv"
         app:layout_constraintTop_toBottomOf="@id/item_blog_title_tv" />
@@ -37,7 +38,7 @@
         android:layout_marginTop="20dp"
         android:maxLines="1"
         android:text="@string/select_blog_postdate_text"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@id/item_blog_description_tv"
         app:layout_constraintTop_toBottomOf="@id/item_blog_description_tv" />
@@ -49,7 +50,8 @@
         android:layout_marginTop="20dp"
         android:maxLines="1"
         android:text="@string/select_blog_link_text"
-        android:textColor="@color/black"
+        android:autoLink="web"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@id/item_blog_postdate_tv"
         app:layout_constraintTop_toBottomOf="@id/item_blog_postdate_tv" />

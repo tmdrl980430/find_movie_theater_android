@@ -156,7 +156,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             if (addresses != null && addresses.isNotEmpty()) {
                 val address = addresses[0].getAddressLine(0)
                 //toast(address)
-                toast(address)
+                //toast(address)
 
             }
         }.start()
@@ -225,9 +225,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         }
 
 
-        naverMap.setOnMapClickListener { point, coord ->
-            addMarker(coord.latitude, coord.longitude, "")
-        }
+//        naverMap.setOnMapClickListener { point, coord ->
+//            addMarker(coord.latitude, coord.longitude, "")
+//        }
     }
 
     private fun addMarker(latitude: Double, longitude: Double, locationName : String) {

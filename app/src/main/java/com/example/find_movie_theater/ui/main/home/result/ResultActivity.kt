@@ -5,10 +5,13 @@ import com.example.find_movie_theater.data.blogsearch.BlogResponse
 import com.example.find_movie_theater.data.blogsearch.BlogService
 import com.example.find_movie_theater.databinding.ActivityResultBinding
 import com.example.find_movie_theater.ui.BaseActivity
+import com.example.find_movie_theater.ui.main.MainActivity
 import com.example.find_movie_theater.ui.main.search.adapter.SearchBlogRVAdapter
 
 class ResultActivity : BaseActivity<ActivityResultBinding>(ActivityResultBinding::inflate) , ResultView{
     override fun initAfterBinding() {
+
+        setClickListeners()
 
         // 이 부분에서 intent를 사용할 수 있습니다.
         val receivedIntent = intent
@@ -32,6 +35,14 @@ class ResultActivity : BaseActivity<ActivityResultBinding>(ActivityResultBinding
         //startNextActivity(WebViewActivity::class.java)
 
     }
+
+    fun setClickListeners() {
+        binding.resultBackBtn.setOnClickListener{
+            startActivityWithClear(MainActivity::class.java)
+
+        }
+    }
+
 
 
 
