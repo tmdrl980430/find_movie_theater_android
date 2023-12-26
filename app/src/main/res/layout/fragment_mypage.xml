@@ -1,17 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@drawable/backgroud_healing_story_no_string"
+    android:elevation="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/menu_mypage"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/baseline_account_circle_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/name_txt"
+                style="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="캐릭터1"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/name_txt"
+                app:layout_constraintTop_toBottomOf="@+id/name_txt">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/baseline_favorite_border_white_18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="취향을 선택해주세요"
+                    android:textColor="#a8a8a8"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:text="취향선택"
+                android:textColor="@color/slateBlue"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="#a8a8a8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/view1">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="네이버 아이디 계정 회원"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rlat***l98"
+                android:textColor="#a8a8a8"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout1"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:text="정보관리"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/textview_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textview_2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Healing Story 우수 회원"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/textview_2"
+                app:layout_constraintTop_toBottomOf="@+id/textview_2" />
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="#a8a8a8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_4" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notice_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="공지사항"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/textview_4"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/service_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="고객센터"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/textview_4"
+                app:layout_constraintTop_toBottomOf="@+id/notice_tv" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notice_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Heal's 게시판"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/textview_4"
+                app:layout_constraintTop_toBottomOf="@+id/service_center" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/playback_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="취미 추천 설정"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/textview_4"
+                app:layout_constraintTop_toBottomOf="@+id/notice_board" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/video_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="취미 설정"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/textview_4"
+                app:layout_constraintTop_toBottomOf="@+id/playback_settings" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/save_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="프로필 설정"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/textview_4"
+                app:layout_constraintTop_toBottomOf="@+id/video_settings" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/app_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="앱 설정"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/textview_4"
+                app:layout_constraintTop_toBottomOf="@+id/save_settings" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/voice_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="서비스 설정"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/textview_4"
+                app:layout_constraintTop_toBottomOf="@+id/app_settings" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/version_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="버전 정보"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/textview_4"
+                app:layout_constraintTop_toBottomOf="@+id/voice_settings" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="현재버전 5.7.2"
+                android:textColor="#a8a8a8"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/version_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/version_info" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
