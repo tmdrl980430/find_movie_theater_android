@@ -16,6 +16,7 @@
         android:layout_marginEnd="25dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
+        android:button="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -56,6 +57,18 @@
             android:text="@string/hobby_exercise_travel"
             android:button="@drawable/custom_radio_button"
             android:tag="3" />
+
+        <RadioButton
+            android:id="@+id/rd_btn_hobby4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="@string/hobby_exercise_food"
+            android:button="@drawable/custom_radio_button"
+            android:tag="4" />
 
     </RadioGroup>
     <!-- 네이버 지도를 추가할 FrameLayout -->

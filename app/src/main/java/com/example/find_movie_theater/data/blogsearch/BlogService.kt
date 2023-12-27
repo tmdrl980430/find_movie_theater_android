@@ -14,7 +14,7 @@ class BlogService (val view: ResultView){
 
         searchNaverBlogInterface.getSearchBlog(
             ApplicationClass.CLIENT_ID,
-            ApplicationClass.CLIENT_SECRET, blogName)
+            ApplicationClass.CLIENT_SECRET, blogName+" 후기")
             .enqueue(object : Callback<BlogResponse> {
                 override fun onResponse(call: Call<BlogResponse>, response: Response<BlogResponse>) {
                     val resp = response.body()

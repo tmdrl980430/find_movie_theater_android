@@ -130,6 +130,43 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                 LocationData(33.4302523, 126.928158, "휘닉스 아일랜드 제주"),
 
             )
+            "food" -> arrayListOf(
+                LocationData(35.1748756, 129.068248, "초원농원 양정점"),
+                LocationData(36.1246529, 128.343248, "김태주선산곱창 구미본점"),
+                LocationData(37.5468055, 126.918029, "츠키젠"),
+                LocationData(37.4336654,127.086576 , "한소반쭈꾸미"),
+                LocationData(36.8799867, 126.803103, "우렁이박사"),
+                LocationData(35.8678601,128.579108 , "동해반점"),
+                LocationData(37.9959425, 127.314539, "금강산 매운 갈비찜"),
+                LocationData(37.5604079, 127.035710, "스시도쿠 카미동 왕십리본점"),
+                LocationData(37.4780809, 126.958399,"기절초풍왕순대"),
+                LocationData(37.5454092,127.223737 , "이속우화구우몽"),
+                LocationData(37.5603946, 126.921047, "바다회사랑"),
+                LocationData(36.0931796, 128.432514, "빙고떡볶이"),
+                LocationData(37.5570878, 127.011648, "금돼지식당"),
+                LocationData(37.5685526, 127.183419, "오찌파스타"),
+                LocationData(37.6692020, 127.119046, "장어의 꿈"),
+                LocationData(37.3854496, 127.120758, "스미노카리 서현점"),
+                LocationData(33.3208272, 126.265329, "맛있는폴부엌"),
+                LocationData(35.1567709,129.134284 , "수변최고돼지국밥 민락본점"),
+                LocationData(34.8797558,128.623061 , "거장물총칼국수 본점"),
+                LocationData(37.5788084, 126.895148, "옥자회관"),
+                LocationData(37.5773027,126.894007 , "다가이순대국 상암점"),
+                LocationData(38.2156614, 128.594172, "속초별미순대국 본점"),
+                LocationData(37.4919403, 127.038528, "백암왕순대순대국"),
+                LocationData(37.4840113, 126.901727, "말뚝곱창1호점"),
+                LocationData(37.6052586, 127.037260, "진주상회"),
+                LocationData(37.7447938,127.056956 , "재복이네솥뚜껑생삼겹살 본점"),
+                LocationData(37.7445147,127.056604 , "기절초풍물닭갈비"),
+                LocationData(37.7525808, 127.069080, "우장창창 의정부금오점"),
+                LocationData(37.6160123, 126.834759, "무원장군집"),
+                LocationData(37.6185241, 126.833383, "행신뒷고기"),
+                LocationData(37.5554995, 126.930944, "철길부산집 숲길점"),
+
+
+
+
+                )
             else -> arrayListOf() // 다른 취미에 대한 처리 필요시 추가
         }
 
@@ -148,6 +185,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         binding.rdBtnHobby1.setOnClickListener { changeHobby("movie") }
         binding.rdBtnHobby2.setOnClickListener { changeHobby("exercise") }
         binding.rdBtnHobby3.setOnClickListener { changeHobby("travel") }
+        binding.rdBtnHobby4.setOnClickListener { changeHobby("food") }
         // 다른 라디오 버튼에 대한 리스너도 필요에 따라 추가
     }
 
