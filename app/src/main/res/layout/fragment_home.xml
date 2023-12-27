@@ -27,10 +27,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/hobby_movie_chip"
+            android:fontFamily="@font/montserrat_italic_variablefont_wght"
             android:textColor="@color/radio_button_selector"
             android:button="@null"
             android:checked="true"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:gravity="center"
             android:tag="1" />
 
@@ -41,9 +42,10 @@
             android:layout_weight="1"
             android:textColor="@color/radio_button_selector"
             android:text="@string/hobby_exercise_chip"
+            android:fontFamily="@font/montserrat_italic_variablefont_wght"
             android:gravity="center"
             android:button="@null"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:tag="2" />
 
         <RadioButton
@@ -53,8 +55,9 @@
             android:layout_weight="1"
             android:textColor="@color/radio_button_selector"
             android:text="@string/hobby_exercise_travel"
+            android:fontFamily="@font/montserrat_italic_variablefont_wght"
             android:gravity="center"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:button="@null"
             android:tag="3" />
 
@@ -65,8 +68,9 @@
             android:layout_weight="1"
             android:textColor="@color/radio_button_selector"
             android:text="@string/hobby_exercise_food"
+            android:fontFamily="@font/montserrat_italic_variablefont_wght"
             android:gravity="center"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:button="@null"
             android:tag="4" />
 

@@ -41,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="캐릭터1"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -68,6 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="취향을 선택해주세요"
+                    android:fontFamily="@font/montserrat_italic_variablefont_wght"
                     android:textColor="#a8a8a8"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -86,6 +88,7 @@
                 android:paddingEnd="15dp"
                 android:paddingBottom="5dp"
                 android:text="취향선택"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/slateBlue"
                 android:textSize="17sp"
                 android:textStyle="bold"
@@ -121,6 +124,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="네이버 아이디 계정 회원"
+                    android:fontFamily="@font/montserrat_italic_variablefont_wght"
                     android:textColor="@color/white"
                     android:textSize="15sp"
                     android:textStyle="normal" />
@@ -133,6 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="rlat***l98"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="#a8a8a8"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout1"
@@ -149,6 +154,7 @@
                 android:paddingEnd="15dp"
                 android:paddingBottom="5dp"
                 android:text="정보관리"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 android:textSize="17sp"
                 android:textStyle="normal"
@@ -162,6 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Healing Story 우수 회원"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="@+id/textview_2"
@@ -187,6 +194,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="공지사항"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@+id/textview_4"
                 app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -198,6 +206,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="고객센터"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@+id/textview_4"
                 app:layout_constraintTop_toBottomOf="@+id/notice_tv" />
@@ -209,6 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="Heal's 게시판"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@+id/textview_4"
                 app:layout_constraintTop_toBottomOf="@+id/service_center" />
@@ -220,6 +230,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="취미 추천 설정"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@+id/textview_4"
                 app:layout_constraintTop_toBottomOf="@+id/notice_board" />
@@ -231,6 +242,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="취미 설정"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@+id/textview_4"
                 app:layout_constraintTop_toBottomOf="@+id/playback_settings" />
@@ -242,6 +254,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="프로필 설정"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@+id/textview_4"
                 app:layout_constraintTop_toBottomOf="@+id/video_settings" />
@@ -253,6 +266,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="앱 설정"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@+id/textview_4"
                 app:layout_constraintTop_toBottomOf="@+id/save_settings" />
@@ -264,6 +278,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="서비스 설정"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@+id/textview_4"
                 app:layout_constraintTop_toBottomOf="@+id/app_settings" />
@@ -275,6 +290,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="버전 정보"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@+id/textview_4"
                 app:layout_constraintTop_toBottomOf="@+id/voice_settings" />
@@ -283,7 +299,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
-                android:text="현재버전 5.7.2"
+                android:text="현재버전 1.0.0"
+                android:fontFamily="@font/montserrat_italic_variablefont_wght"
                 android:textColor="#a8a8a8"
                 android:textSize="15sp"
                 android:textStyle="bold"
