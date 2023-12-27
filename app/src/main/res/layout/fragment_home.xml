@@ -25,49 +25,49 @@
             android:id="@+id/rd_btn_hobby1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="5dp"
-            android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:text="@string/hobby_movie_chip"
-            android:textColor="@color/white"
-            android:button="@drawable/custom_radio_button"
+            android:textColor="@color/radio_button_selector"
+            android:button="@null"
             android:checked="true"
+            android:textSize="25sp"
+            android:gravity="center"
             android:tag="1" />
 
         <RadioButton
             android:id="@+id/rd_btn_hobby2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="5dp"
-            android:layout_marginStart="5dp"
             android:layout_weight="1"
-            android:textColor="@color/white"
+            android:textColor="@color/radio_button_selector"
             android:text="@string/hobby_exercise_chip"
-            android:button="@drawable/custom_radio_button"
+            android:gravity="center"
+            android:button="@null"
+            android:textSize="25sp"
             android:tag="2" />
 
         <RadioButton
             android:id="@+id/rd_btn_hobby3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="5dp"
-            android:layout_marginStart="5dp"
             android:layout_weight="1"
-            android:textColor="@color/white"
+            android:textColor="@color/radio_button_selector"
             android:text="@string/hobby_exercise_travel"
-            android:button="@drawable/custom_radio_button"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:button="@null"
             android:tag="3" />
 
         <RadioButton
             android:id="@+id/rd_btn_hobby4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="5dp"
-            android:layout_marginStart="5dp"
             android:layout_weight="1"
-            android:textColor="@color/white"
+            android:textColor="@color/radio_button_selector"
             android:text="@string/hobby_exercise_food"
-            android:button="@drawable/custom_radio_button"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:button="@null"
             android:tag="4" />
 
     </RadioGroup>
@@ -79,9 +79,10 @@
         android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radiogroup_hobby" />
-
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup_hobby"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

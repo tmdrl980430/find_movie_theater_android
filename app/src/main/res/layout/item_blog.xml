@@ -9,6 +9,8 @@
     android:padding="20dp"
     android:background="@drawable/blog_item_border_background">
 
+
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/item_blog_title_tv"
         android:layout_width="wrap_content"
@@ -67,7 +69,7 @@
         android:autoLink="web"
         android:maxLines="1"
         android:text="@string/select_blog_see_more_text"
-        android:textColor="@color/white"
+        android:textColor="@color/slateBlue"
         android:textSize="14sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="@+id/item_blog_postdate_tv"
