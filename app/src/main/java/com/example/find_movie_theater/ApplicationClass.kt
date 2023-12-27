@@ -51,5 +51,6 @@ class ApplicationClass : Application() {
             .build()
 
         mSharedPreferences = applicationContext.getSharedPreferences(TAG, MODE_PRIVATE)
+
     }
 }

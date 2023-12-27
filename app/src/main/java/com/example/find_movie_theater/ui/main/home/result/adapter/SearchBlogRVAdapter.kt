@@ -76,7 +76,7 @@ class SearchBlogRVAdapter(private val blogList: ArrayList<BlogItem>) : RecyclerV
 
             binding.itemBlogTitleTv.text = changeHtmlText(blog.title)
             binding.itemBlogDescriptionTv.text = changeHtmlText(blog.description)
-            binding.itemBlogBloggerlinkTv.text = changeHtmlText(blog.link)
+            //binding.itemBlogBloggerlinkTv.text = changeHtmlText(blog.link)
             binding.itemBlogPostdateTv.text = changeHtmlText(blog.postdate)
 
         }
