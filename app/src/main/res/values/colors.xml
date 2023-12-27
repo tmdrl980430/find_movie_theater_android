@@ -48,5 +48,7 @@
     <color name="uncheckedColor">#00FF00</color> <!-- 선택되지 않은 상태의 색상 (예: 녹색) -->
 
 
+    <color name="contentree_color">#BE2F35</color>
+
 </resources>
 
