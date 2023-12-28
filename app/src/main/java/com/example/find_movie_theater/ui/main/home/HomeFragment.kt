@@ -18,6 +18,7 @@ import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.overlay.Marker
+import com.naver.maps.map.overlay.OverlayImage
 import com.naver.maps.map.util.FusedLocationSource
 import java.util.Locale
 
@@ -292,7 +293,17 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     private fun addMarker(latitude: Double, longitude: Double, locationName : String) {
         val newMarker = Marker()
+
+
         newMarker.position = LatLng(latitude, longitude)
+        newMarker.icon = OverlayImage.fromResource(R.drawable.marker_ic4)
+
+        // 마커의 크기 설정
+        val width = 100
+        val height = 100
+        newMarker.width = width
+        newMarker.height = height
+
         newMarker.map = naverMap
         newMarker.captionText = locationName
         Log.d("newMarker.position ","newMarker.position  : ${newMarker.position }")
